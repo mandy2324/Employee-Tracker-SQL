@@ -1,7 +1,7 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
 const ctable = require("console.table");
-const mysql = require("mysql2");
+const mysql = require("mysql");
 const util = require("util");
 
 // Logo requirements:
@@ -21,8 +21,8 @@ const connection = mysql.createConnection({
 connection.connect((err) => {
     if (err) {
         console.log(err);
-        // res.status(500);
-        // return res.send("error connecting the database");
+        res.status(500);
+        return res.send("error connecting the database");
     }
     console.log("connection successfull");
 
