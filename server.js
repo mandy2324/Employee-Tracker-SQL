@@ -11,8 +11,7 @@ console.log(logo(config).render());
 
 // connection
 const connection = mysql.createConnection({
-    host: "localhost",
-    port: 3001,
+
     user: "root",
     password: 12345678,
     database: "employee_tracker",
@@ -21,8 +20,7 @@ const connection = mysql.createConnection({
 connection.connect((err) => {
     if (err) {
         console.log(err);
-        res.status(500);
-        return res.send("error connecting the database");
+
     }
     console.log("connection successfull");
 
