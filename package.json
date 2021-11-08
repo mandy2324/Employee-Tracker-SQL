@@ -20,7 +20,6 @@
     "homepage": "https://github.com/mandy2324/Employee-Tracker-SQL#readme",
     "dependencies": {
         "asciiart-logo": "^0.2.6",
-        "console.table": "^0.10.0",
         "inquirer": "^8.2.0",
         "mysql": "^2.18.1",
         "mysql2": "^2.3.3-rc.0"
