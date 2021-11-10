@@ -270,13 +270,13 @@ function addRole() {
 function addDepartment() {
 
     inquirer.prompt([{
-        name: "name",
+        name: "Dept_name",
         type: "input",
         message: "What Department would you like to add?"
     }]).then(function(res) {
         var query = connection.query(
             "INSERT INTO department SET ? ", {
-                name: res.name
+                name: res.Dept_name
 
             },
             function(err) {
