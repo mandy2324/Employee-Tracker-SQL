@@ -66,7 +66,7 @@ THEN I am prompted to select an employee to update and their new role and this i
 
   - `manager_id`: `INT` to hold reference to another employee that is the manager of the current employee (`null` if the employee has no manager)
 
-![Database schema includes tables labeled “employee,” role,” and “department.”](./Assets/sql.png)
+![Database schema includes tables labeled “employee,” role,” and “department.”](.//Assets/sql.png)
 
 ### Walkthrough Video:
 
