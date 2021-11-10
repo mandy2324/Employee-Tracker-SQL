@@ -1,34 +1,46 @@
-use employee_tracker;
+INSERT INTO department (Dept_name)
+VALUE ("Sales");
+INSERT INTO department (Dept_name)
+VALUE ("Engineering");
+INSERT INTO department (Dept_name)
+VALUE ("Finance");
+INSERT INTO department (Dept_name)
+VALUE ("Legal");
 
-INSERT INTO department
-    (d_name)
-VALUES
-    ('Sales'),
-    ('Engineering'),
-    ('Finance'),
-    ('Legal');
+-- EMPLOYEE ROLE SEEDS -------
+INSERT INTO role (title, salary, department_id)
+VALUE ("Lead Engineer", 150000, 2);
+INSERT INTO role (title, salary, department_id)
+VALUE ("Legal Team Lead", 250000, 4);
+INSERT INTO role (title, salary, department_id)
+VALUE ("Accountant", 125000, 3);
+INSERT INTO role (title, salary, department_id)
+VALUE ("Sales Lead", 100000, 1);
+INSERT INTO role (title, salary, department_id)
+VALUE ("Salesperson", 80000, 1);
+INSERT INTO role (title, salary, department_id)
+VALUE ("Software Engineer", 120000, 2);
+INSERT INTO role (title, salary, department_id)
+VALUE ("Lawyer", 190000, 4);
 
-    INSERT INTO role
-    (title, salary, department_id)
+-- EMPLOYEE SEEDS -------
+INSERT INTO employee (first_name, last_name, manager_id, role_id)
+VALUE ("Jessica", "Haze", null, 1);
+INSERT INTO employee (first_name, last_name, manager_id, role_id)
+VALUE ("Tiffany", "Patric", null, 2);
+INSERT INTO employee (first_name, last_name, manager_id, role_id)
+VALUE ("Mia","Lam",null,3);
+INSERT INTO employee (first_name, last_name, manager_id, role_id)
+VALUE ("Bently", "Lao", 1, 4);
+INSERT INTO employee (first_name, last_name, manager_id, role_id)
+VALUE ("Chris", "Melby", 4, 5);
+INSERT INTO employee (first_name, last_name, manager_id, role_id)
+VALUE ("Jason", "Baker", 1, 6);
+INSERT INTO employee (first_name, last_name, manager_id, role_id)
+VALUE ("Tom", "Nice", 2, 7);
 
-    VALUES
-     ('Sales Lead', 12000, 1),
-    ('Salesperson', 85000, 1),
-    ('Lead Engineer', 250000, 2),
-    ('Software Engineer', 520000, 2),
-    ('Account Manager', 660000, 3),
-    ('Accountant', 625000, 3),
-    ('Legal Team Lead', 200000, 4),
-    ('Lawyer', 200000, 4);
-
-    INSERT INTO employee
-    (first_name, last_name, role_id, manager_id)
-VALUES
-    ('Ric', 'Ocasek', 1, NULL),
-    ('Janis', 'Joplin', 2, 1),
-    ('Stevie', 'Nicks', 3, NULL),
-    ('Ray', 'Manzarek', 4, 3),
-    ('Ray', 'Charles', 5, NULL),
-    ('Ann', 'Wilson', 6, 5),
-    ('Robert', 'Plant', 7, NULL),
-    ('Roger', 'Waters', 8, 7);
+-- SELECTING FOR CREATING 
+--TABLES IN OUR SQL WORKBENCH 
+SELECT * FROM department;
+SELECT * FROM role;
+SELECT * FROM employee;
