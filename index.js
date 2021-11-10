@@ -276,7 +276,7 @@ function addDepartment() {
     }]).then(function(res) {
         var query = connection.query(
             "INSERT INTO department SET ? ", {
-                name: res.Dept_name
+                Dept_name: res.name
 
             },
             function(err) {
